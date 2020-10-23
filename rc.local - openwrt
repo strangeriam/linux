@@ -36,4 +36,6 @@ root@OpenWrt:/# /etc/init.d/test.sh enable
 # /etc/init.d/your_script restart //重新啟動
 # /etc/init.d/your_script stop //停止
 
-
+START=99
+STOP=99
+# START=99 & STOP=99 意思是給此script在開機時的優先順序. 99是一個最低的優先權限.
