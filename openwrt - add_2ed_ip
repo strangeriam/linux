@@ -1,1 +1,1 @@
-ip addr add 192.168.1.4 dev br-lan
+ip addr add 192.168.1.2 dev br-lan
