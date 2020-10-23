@@ -1,0 +1,39 @@
+# OpenWrt 的 /etc/rc.local 無法於開機時執行.
+# 需使用方法: your script + /etc/rc.common
+# 範例為更改 IP Address.
+# 注意第一行 "#!/bin/sh /etc/rc.common" 一定要有，才有辦法在OpenWrt裡順利執行.
+
+# 步驟
+# your script file, /etc/init.d/test.sh
+# === Script Content ====================
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=99
+
+start()
+{
+          ifconfig eth0 192.168.1.2 netmask 255.255.255.0
+}
+
+stop()
+{
+          ifconfig eth0
+}
+# =======================================
+
+# 讓你的 script 可被執行.
+root@OpenWrt:/# chmod 777 /etc/init.d/test.sh
+
+# 告訴OpenWrt下次開機就要自動執行此script.
+root@OpenWrt:/# /etc/init.d/test.sh enable
+
+# /etc/rc.common 使用說明
+# /etc/init.d/your_script enable //在開機時就自動執行
+# /etc/init.d/your_script disable //取消開機時就自動執行
+# /etc/init.d/your_script boot
+# /etc/init.d/your_script start //啟動 your_script
+# /etc/init.d/your_script restart //重新啟動
+# /etc/init.d/your_script stop //停止
+
+
