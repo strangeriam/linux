@@ -13,12 +13,12 @@ STOP=99
 
 start()
 {
-          ifconfig eth0 192.168.1.2 netmask 255.255.255.0
+          ip addr add 192.168.1.2/24 dev br-lan
 }
 
 stop()
 {
-          ifconfig eth0
+          ifconfig br-lan
 }
 # =======================================
 
