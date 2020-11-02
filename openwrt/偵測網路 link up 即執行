@@ -1,0 +1,20 @@
+# your script file, /etc/init.d/test.sh
+# === Script Content ====================
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=99
+
+start()
+{
+          ifconfig br-lan 192.168.1.2 netmask 255.255.255.0
+}
+
+stop()
+{
+          ifconfig br-lan
+}
+# =======================================
+
+root@OpenWrt:/# chmod 777 /etc/init.d/test.sh
+root@OpenWrt:/# /etc/init.d/test.sh enable
