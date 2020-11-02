@@ -1,0 +1,7 @@
+# 變數 variables 使用.
+
+# 帶指令型式, 需用 ` 括起來, 按鍵位於 [~`] 在 ESC 鍵下方.
+root@OpenWrt:/# aaa=`date`
+root@OpenWrt:/# echo -e $aaa
+Tue Oct 27 14:59:37 UTC 2020
+
