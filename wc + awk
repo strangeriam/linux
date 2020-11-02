@@ -1,0 +1,27 @@
+# wc (Word Count) 計算檔案的資訊
+# (可帶多個檔案計算, eg. wc -lcw filename1 filename2) 
+
+# [ -l ] 計算換行數 (小寫 L)
+# [ -w ] 計算字數
+# [ -c ] 計算位元組
+# [ -m ] 計算字元數 character
+# [ -L ] 計算最長行的長度
+
+root@OpenWrt:/tmp# wc aaa.log 
+        4        57       438 aaa.log
+
+
+# ===================================
+# 只顯示特定欄位, 只列出總行數 4.
+# awk '{print $1}' 的 ‘…’ 是在鍵盤上的 冒號 “:” 右邊.
+
+root@OpenWrt:/tmp# wc aaa.log | awk '{print $1}'
+4
+
+# ===================================
+# awk 只列印有特定字串的行
+# example: 只印有 CPU 字串的行.
+
+root@OpenWrt:/tmp# awk '$0 ~ /CPU/{print}' aaa.log 
+72:[    0.234363] hw-breakpoint: CPU 1 failed to disable vector catch
+root@OpenWrt:/tmp# 
