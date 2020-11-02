@@ -3,3 +3,5 @@
 
 ip route | awk '/default/ {print $3}'
 
+# 取 USB disk size
+fdisk -l | awk '/sdb:/ {print $3}'
