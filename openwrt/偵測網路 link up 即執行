@@ -1,3 +1,9 @@
+# 目的:
+#     Sleep 15, 等待 Ethernet link up.
+#     Bridge Control 預設為綁定 eth1.
+#     當偵測到 eth0 有連線, 則將 Bridge Control 改綁為 eth0.
+#     將預設 IP 改為 192.168.1.2 (default 192.168.1.1)
+
 # your script file, /etc/init.d/test.sh
 # === Script Content ====================
 #!/bin/sh /etc/rc.common
@@ -7,7 +13,17 @@ STOP=99
 
 start()
 {
-          ifconfig br-lan 192.168.1.2 netmask 255.255.255.0
+          sleep 15
+          cat /sys/class/net/eth0/operstate > /tmp/check.log
+          RESULT=`grep "up" /tmp/check.log | wc -c`
+
+          if expr $RESULT != 0
+          then
+                    brctl delif br-lan eth1
+                    brctl addif br-lan eth0
+                    ifconfig br-lan 192.168.1.2 netmask 255.255.255.0
+          fi
+
 }
 
 stop()
