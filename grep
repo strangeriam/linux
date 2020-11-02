@@ -1,0 +1,8 @@
+# [ -n ] 顯示行數
+grep -n 'cpu' filename.txt
+dmesg | grep -n 'cpu'
+
+# 其他
+[ -vn ] 反向選擇, 沒有特定字串時才顯示在螢幕上.
+[ -in ] 不論字串的大小寫
+
