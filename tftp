@@ -1,0 +1,7 @@
+# Client
+
+# Get file from TFTP server.
+tftp -g -l [localFile] -r [remoteFile] 192.168.1.200
+
+# Upload file to TFTP server.
+tftp -p -l [localFile] -r [remoteFile] 192.168.1.200
