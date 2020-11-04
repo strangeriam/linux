@@ -1,0 +1,13 @@
+cat /sys/class/net/eth0/operstate > /tmp/check.log
+
+==> 檢查 log, 讀到 down.
+cat /tmp/check.log
+down
+
+==> 檢查是否有 up 字串. 此例讀到 0, 意思是沒 up 字串.
+grep "up" /tmp/check.log | wc -c
+0
+
+==> 檢查是否有 down 字串. 此例讀到 5, 意思是有含 down 字串.
+grep "down" /tmp/check.log | wc -c
+5
