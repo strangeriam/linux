@@ -1,0 +1,12 @@
+Default user: pi / raspberry
+
+Change root password
+====================
+pi@raspberrypi:~ $ sudo passwd root
+New password:
+Retype new password:
+
+Login root
+==========
+pi@raspberrypi:~ $ su -
+Password: [your password]
