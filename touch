@@ -1,3 +1,0 @@
-# 產生空白檔案.
-
-touch /etc/init.d/test.sh
