@@ -1,0 +1,8 @@
+
+dmesg | grep "usb 1-1" | grep "USB device number"
+==> [   41.408090] usb 1-1: new high-speed USB device number 6 using xhci_hcd
+
+dmesg | grep "usb 2-1" | grep "USB device number"
+==> [   77.852164] usb 2-1: new SuperSpeed USB device number 2 using xhci_hcd
+
+dmesg | grep "USB device number"
