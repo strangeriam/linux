@@ -1,0 +1,14 @@
+
+## Add other NIC to bridge "br-lan".
+brctl addif br-lan eth0
+
+## Delete "eth0" from br-lan.
+brctl delif br-lan eno1
+
+## Add second IP address.
+ip addr add 192.168.2.1/24 dev br-lan
+
+ifconfig br-lan down
+
+# Delete bridge "br-lan".
+brctl delbr br-lan
