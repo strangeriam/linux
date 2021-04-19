@@ -1,11 +1,13 @@
-# By default, pi linux not support "ll".
+## By default, Pi linux not support "ll".
+## Go to user Pi's home.
 
-% cd ~ #; go to user home.
-% vi .bashrc
+$ cd ~ 
+$ vi .bashrc
 
-# Add below
+## Add below
+
 alias ll='ls -alF'
 
-# Execute source
-% source .bashrc
-% ll
+## Execute source
+$ source .bashrc
+$ ll
