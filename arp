@@ -1,0 +1,16 @@
+root@MLTG-CN:/# arp -n
+IP address       HW type     Flags       HW address            Mask     Device
+192.168.3.101    0x1         0x2         dc:a6:32:d3:67:69     *        br-lan
+192.168.2.101    0x1         0x2         00:e0:4c:68:02:50     *        br-lan
+root@MLTG-CN:/# ip -s -s neigh flush all
+[  119.608462] netlink: 12 bytes leftover after parsing attributes in process `ip'.
+[  119.608502] netlink: 12 bytes leftover after parsing attributes in process `ip'.
+[  119.615248] netlink: 12 bytes leftover after parsing attributes in process `ip'.
+[  119.622305] netlink: 12 bytes leftover after parsing attributes in process `ip'.
+192.168.3.101 dev br-lan lladdr dc:a6:32:d3:67:69 used 77/77/62 probes 4 STALE
+192.168.2.101 dev br-lan lladdr 00:e0:4c:68:02:50 used 90/68/52 probes 0 STALE
+fe80::ab94:21ab:9a03:f25b dev eth0 lladdr dc:a6:32:d3:67:69 used 83/143/71 probes 0 STALE
+
+*** Round 1, deleting 3 entries ***
+*** Flush is complete after 1 round ***
+root@MLTG-CN:/# 
