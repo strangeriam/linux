@@ -13,22 +13,21 @@ STOP=99
 
 start()
 {
-          sleep 15
-          cat /sys/class/net/eth0/operstate > /tmp/check.log
-          RESULT=`grep "up" /tmp/check.log | wc -c`
+     sleep 15
+     cat /sys/class/net/eth0/operstate > /tmp/check.log
+     RESULT=`grep "up" /tmp/check.log | wc -c`
 
-          if expr $RESULT != 0
-          then
-                    brctl delif br-lan eth1
-                    brctl addif br-lan eth0
-                    ifconfig br-lan 192.168.1.2 netmask 255.255.255.0
-          fi
-
+     if expr $RESULT != 0
+     then
+            brctl delif br-lan eth1
+            brctl addif br-lan eth0
+            ifconfig br-lan 192.168.1.2 netmask 255.255.255.0
+     fi
 }
 
 stop()
 {
-          ifconfig br-lan
+     ifconfig br-lan
 }
 # =======================================
 
