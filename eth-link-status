@@ -1,3 +1,10 @@
-cat /sys/class/net/eth0/operstate
-
+## Link status
 ## Reply: up (or down)
+root@OpenWrt:/# cat /sys/class/net/eth0/operstate
+up
+root@OpenWrt:/# 
+
+## Link speed
+root@OpenWrt:/# cat /sys/class/net/eth1/speed 
+1000
+root@OpenWrt:/# 
