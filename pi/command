@@ -33,23 +33,3 @@ apt-get install tightvncserver
 010- Pi, TCL/TK required.
 #apt-get install tcl8.5-dev
 #apt-get install tk8.5-dev
-
-097- Samba, installation.
-(config file: /etc/samba/smb.conf)
-#apt-get install samba
-
-098- Samba, commands.
-# /etc/init.d/samba restart (start, stop, status,...)
-
-099- Samba, parameters of first sharing
-# useradd user1
-# smbpasswd -a user1
-# vim /etc/samba/smb.conf
-
-[worktmp]
-         comment = Hello guys
-         path = /worktmp
-         writable = yes
-         valid users = user1
-         create mask = 0700
-         directory mask = 0700
