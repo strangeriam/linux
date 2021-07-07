@@ -1,0 +1,18 @@
+## Active Console mode.
+
+cd Raspberry-Pi-Installer-Scripts
+sudo python3 adafruit-pitft.py --display=35r --rotation=90 --install-type=console
+Y
+
+startx
+
+
+## FBCP (LCD) Install Commands
+
+cd Raspberry-Pi-Installer-Scripts
+sudo python3 adafruit-pitft.py --display=35r --rotation=90 --install-type=fbcp
+
+
+## 使用 Menu 操作
+cd Raspberry-Pi-Installer-Scripts
+sudo python3 adafruit-pitft.py
