@@ -4,5 +4,6 @@ cd Raspberry-Pi-Installer-Scripts
 sudo python3 adafruit-pitft.py --display=35r --rotation=90 --install-type=console
 Y
 
+## Go to GUI mode.
 startx
 
