@@ -1,0 +1,3 @@
+
+sudo raspi-config
+SSH --> Enable or Disable SSH Server
