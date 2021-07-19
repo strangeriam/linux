@@ -1,4 +1,6 @@
 
+## OUI:
+## 00:a0:c9 --> Intel
 
 ## SYS-CLASS-NET
 ~$ cat /sys/class/net/enp2s0/address 
