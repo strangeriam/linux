@@ -1,0 +1,6 @@
+
+
+## SYS - CLASS
+$ cat /sys/class/net/enp2s0/address 
+00:a0:c9:00:30:10
+$ 
