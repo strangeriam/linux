@@ -1,6 +1,9 @@
 
 
-## SYS - CLASS
-$ cat /sys/class/net/enp2s0/address 
+## SYS-CLASS-NET
+~$ cat /sys/class/net/enp2s0/address 
 00:a0:c9:00:30:10
-$ 
+~$ 
+~$ cat /sys/class/net/enp3s0/address  
+00:a0:c9:00:30:11
+~$ 
