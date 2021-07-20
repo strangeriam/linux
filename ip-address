@@ -1,3 +1,14 @@
 
 ## Add IP and second IP address.
-ip addr add 192.168.1.2/24 dev br-lan
+$ ip addr add 192.168.1.2/24 dev br-lan
+
+
+## Static IP
+$ sudo vi /etc/dhcpcd.conf
+
+interface eth0
+static ip_address=192.168.2.2/24
+static routers=192.168.2.254
+static domain_name_servers=168.95.1.1 168.95.192.1
+
+$ reboot
