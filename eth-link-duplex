@@ -1,0 +1,7 @@
+
+root@magma:/home/magma# 
+root@magma:/home/magma# cat /sys/class/net/enp2s0/duplex 
+full
+root@magma:/home/magma# cat /sys/class/net/enp3s0/duplex  
+full
+root@magma:/home/magma# 
