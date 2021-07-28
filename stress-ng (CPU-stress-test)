@@ -1,0 +1,1 @@
+stress-ng --cpu 2 --io 4 --vm-bytes 512M --fork 4 --timeout 30.0
