@@ -1,0 +1,7 @@
+crontab -e
+
+## every 10 seconds
+*/10 * * * * echo > /tmp/tmp.log
+
+## 9 oclock everyday morning.
+0 9 * * * echo > /tmp/tmp.log
