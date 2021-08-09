@@ -1,10 +1,13 @@
 ## Link status
 ## Reply: up (or down)
-root@OpenWrt:/# cat /sys/class/net/eth0/operstate
+:/# cat /sys/class/net/eth0/operstate
 up
-root@OpenWrt:/# 
 
 ## Link speed
-root@OpenWrt:/# cat /sys/class/net/eth1/speed 
+:/# cat /sys/class/net/eth1/speed 
 1000
-root@OpenWrt:/# 
+
+:/# ip link show enp2s0
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:a0:c9:00:00:0f brd ff:ff:ff:ff:ff:ff
+
