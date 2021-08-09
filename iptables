@@ -1,0 +1,2 @@
+# 放行 Port 5201.
+# iptables -I INPUT -s 192.168.32.0/24 -p tcp --dport 5201 -j ACCEPT
