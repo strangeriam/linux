@@ -5,6 +5,7 @@ network:
       addresses: [192.168.1.3/24]
       gateway4: 192.168.1.254
       dhcp4: no
+      optional: no
 
     enp3s0:
       dhcp4: true
