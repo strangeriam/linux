@@ -1,0 +1,88 @@
+帶 -v 時的升級過程 :
+root@OpenWrt:/# tftp -g -l /tmp/norplusnand-ipq6018-apps.img -r apcode/Edgecore_MLTG-CN_1.2.0-00503-65c0735.rom 192.168.2.101
+root@OpenWrt:/# md5sum /tmp/norplusnand-ipq6018-apps.img
+root@OpenWrt:/# sysupgrade -v /tmp/norplusnand-ipq6018-apps.img
+
+=================== LOG ======================================
+root@node-90-3c-b3-02-00-11:~# 
+root@node-90-3c-b3-02-00-11:~# tftp -g -l /tmp/norplusnand-ipq6018-apps.img -r apcode/Edgecore_MLTG-CN_1.2.0-00503-65c0735.rom 192.168.2.101
+apcode/Edgecore_MLTG 100% |*************************************************************************************| 42115k  0:00:00 ETA
+root@node-90-3c-b3-02-00-11:~# 
+root@node-90-3c-b3-02-00-11:~# md5sum /tmp/norplusnand-ipq6018-apps.img
+afa092591c96b7ab30aab1e4497ad057  /tmp/norplusnand-ipq6018-apps.img
+root@node-90-3c-b3-02-00-11:~# 
+root@node-90-3c-b3-02-00-11:~# sysupgrade -v /tmp/norplusnand-ipq6018-apps.img
+Warning: optional section "sb11" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+Warning: optional section "sbl2" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+Warning: optional section "u-boot" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+Warning: optional section "lkboot" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+Warning: optional section "ddr-ap-cp01-c1" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+Warning: optional section "ssd" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+Warning: optional section "tz" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+Warning: optional section "rpm" missing from "/tmp/norplusnand-ipq6018-apps.img". Continue...
+stat: No such file or directory
+Saving config files...
+data/cfg/node_config.json
+etc/config/acn
+etc/config/cnss_diag
+etc/config/dhcp
+etc/config/dropbear
+etc/config/ethernet
+etc/config/firewall
+etc/config/gpsd
+etc/config/lldpd
+etc/config/luci
+etc/config/network
+etc/config/nss
+etc/config/ntpclient
+etc/config/radvd
+etc/config/rpcd
+etc/config/rstp
+etc/config/skb_recycler
+etc/config/snmpd
+etc/config/sysstat
+etc/config/system
+etc/config/tasks
+etc/config/thermal
+etc/config/ubootenv
+etc/config/ucitrack
+etc/config/uhttpd
+etc/config/upnpd
+etc/config/users
+etc/config/vlan_aware_bridge
+etc/crontabs/root
+etc/dbus-1/session.conf
+etc/dbus-1/system.conf
+etc/dnsmasq.conf
+etc/dropbear/dropbear_rsa_host_key
+etc/firewall.user
+etc/fw_env.config
+etc/group
+etc/hosts
+etc/inittab
+etc/login.defs
+etc/logrotate.conf
+etc/lvm/lvm.conf
+etc/opkg.conf
+etc/opkg/customfeeds.conf
+etc/opkg/keys/1670c15a2d43cac1
+etc/opkg/keys/53bad1233d4c98c5
+etc/opkg/keys/de98a2dd1d0f8a07
+etc/passwd
+etc/ppp/chap-secrets
+etc/ppp/filter
+etc/ppp/options
+etc/profile
+etc/protocols
+etc/rc.local
+etc/services
+etc/shadow
+etc/shells
+etc/ssl/openssl.cnf
+etc/sudoers
+etc/sysconfig/openr
+etc/sysctl.conf
+etc/sysstat/sysstat
+etc/sysstat/sysstat.ioconf
+etc/sysupgrade.conf
+etc/xattr.conf
