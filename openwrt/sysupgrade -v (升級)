@@ -1,6 +1,8 @@
 Via SSH connection
 帶 -v 時的升級過程 :
+-v      會列印sysupgrade指令碼中的一些資訊，指令碼中預設列印
 
+=================== COMMAND ==================================
 root@OpenWrt:/# tftp -g -l /tmp/norplusnand-ipq6018-apps.img -r apcode/Edgecore_MLTG-CN_1.2.0-00503-65c0735.rom 192.168.2.101
 root@OpenWrt:/# md5sum /tmp/norplusnand-ipq6018-apps.img
 root@OpenWrt:/# sysupgrade -v /tmp/norplusnand-ipq6018-apps.img
