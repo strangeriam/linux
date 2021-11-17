@@ -11,3 +11,14 @@
 -F      即使升級檔案檢測失敗，也要升級，這個引數是危險的，慎用
 -T      驗證升級檔案和.tar.gz配置檔案，但不升級
 -h      列印幫助資訊
+
+Example 1
+帶-v時的升級過程：
+root@OpenWrt:/# sysupgrade -i -v/tmp/firmware.img
+
+
+
+
+Example 2
+不帶-v時的升級過程：
+root@OpenWrt:/# sysupgrade -i/tmp/firmware.img 
