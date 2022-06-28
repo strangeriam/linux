@@ -1,0 +1,18 @@
+Listing USB block storage devices.
+
+## No USB dongle
+root@igw5000:~# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0 238.5G  0 disk 
+â””â”€sda1   8:1    0  14.5G  0 part /
+root@igw5000:~# 
+
+
+## Got USB dongle
+root@igw5000:~# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0 238.5G  0 disk 
+â””â”€sda1   8:1    0  14.5G  0 part /
+sdb      8:16   1    15G  0 disk 
+â””â”€sdb1   8:17   1    15G  0 part 
+root@igw5000:~# 
