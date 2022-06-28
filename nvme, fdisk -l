@@ -1,0 +1,41 @@
+
+
+## No NVME disk.
+
+root@igw5000:~# fdisk -l
+Disk /dev/sda: 238.5 GiB, 256060514304 bytes, 500118192 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x151c20ef
+
+Device     Boot Start      End  Sectors  Size Id Type
+/dev/sda1  *     2048 30461951 30459904 14.5G 83 Linux
+root@igw5000:~# 
+
+
+## Got NVME disk "/dev/nvme0n1".
+
+root@igw5000:~# fdisk -l
+Disk /dev/nvme0n1: 119.2 GiB, 128035676160 bytes, 250069680 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 7A284877-C946-4850-9FA5-139722B34A89
+
+Device         Start       End   Sectors   Size Type
+/dev/nvme0n1p1  2048 250069646 250067599 119.2G Linux filesystem
+
+
+Disk /dev/sda: 238.5 GiB, 256060514304 bytes, 500118192 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x151c20ef
+
+Device     Boot Start      End  Sectors  Size Id Type
+/dev/sda1  *     2048 30461951 30459904 14.5G 83 Linux
+root@igw5000:~# 
