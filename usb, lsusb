@@ -1,0 +1,19 @@
+Example for USB dongle "Silicon Motion, Inc."
+
+## No USB dongole
+root@igw5000:~# lsusb
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 05e3:0610 Genesys Logic, Inc. 4-port hub
+Bus 001 Device 003: ID 0cf3:e300 Atheros Communications, Inc. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+root@igw5000:~# 
+
+
+## Got USB dongle
+root@igw5000:~# lsusb
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 05e3:0610 Genesys Logic, Inc. 4-port hub
+Bus 001 Device 003: ID 0cf3:e300 Atheros Communications, Inc. 
+Bus 001 Device 002: ID 090c:1000 Silicon Motion, Inc. - Taiwan (formerly Feiya Technology Corp.) Flash Drive
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+root@igw5000:~# 
