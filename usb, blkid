@@ -1,0 +1,14 @@
+Ssame information as lsblk command with blkid command. But you have to run it as root
+
+## No USB dongle.
+root@igw5000:~# blkid
+/dev/sda1: UUID="11d2ba2e-2303-475c-ad44-714f0d47c0c8" TYPE="ext4" PARTUUID="151c20ef-01"
+root@igw5000:~# 
+
+
+## Got USB dongle.
+root@igw5000:~# blkid
+/dev/sda1: UUID="11d2ba2e-2303-475c-ad44-714f0d47c0c8" TYPE="ext4" PARTUUID="151c20ef-01"
+/dev/sdb1: UUID="0CBD-29CB" TYPE="vfat" PARTUUID="6f3b49da-01"
+root@igw5000:~# 
+
