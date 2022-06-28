@@ -1,0 +1,40 @@
+
+
+
+## No USB dongle
+root@igw5000:~# fdisk -l
+Disk /dev/sda: 238.5 GiB, 256060514304 bytes, 500118192 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x151c20ef
+
+Device     Boot Start      End  Sectors  Size Id Type
+/dev/sda1  *     2048 30461951 30459904 14.5G 83 Linux
+root@igw5000:~# 
+
+
+## Got USB dongle
+root@igw5000:~# fdisk -l
+Disk /dev/sda: 238.5 GiB, 256060514304 bytes, 500118192 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x151c20ef
+
+Device     Boot Start      End  Sectors  Size Id Type
+/dev/sda1  *     2048 30461951 30459904 14.5G 83 Linux
+
+
+Disk /dev/sdb: 15 GiB, 16108224512 bytes, 31461376 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x6f3b49da
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/sdb1        2048 31461375 31459328  15G  c W95 FAT32 (LBA)
+root@igw5000:~# 
