@@ -5,3 +5,17 @@ tftp -g -l [localFile] -r [remoteFile] 192.168.1.200
 
 # Upload file to TFTP server.
 tftp -p -l [localFile] -r [remoteFile] 192.168.1.200
+
+
+# iptables
+# To open the TFTP port in IPTables, we will run the rule:
+sudo iptables -A INPUT -p udp --dport 69 -j ACCEPT
+
+# To open the TFTP port for a specific network only, we will run the rule:
+sudo iptables -A INPUT -p udp -s 192.168.1.0/24 --dport 69 -j ACCEPT
+
+# To remove a rule, we’ll use the same command, replacing -A with -D, for example:
+sudo iptables -D INPUT -p udp -s 192.168.1.0/24 --dport 69 -j ACCEPT
+
+# To view the list of rules, use the command:
+sudo iptables -nvL
