@@ -3,3 +3,5 @@ Terminal → sudo -s → raspi-config
 Raspberry Pi Software Configuration Tool → 3 Interface Options → P6 Serial Port
 
 Login: pi / raspberry
+
+baud rate: 115200-8-n-1
