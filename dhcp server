@@ -1,8 +1,18 @@
 
-# dhcp-lease-list
+Active DHCP Server.
+# sudo service isc-dhcp-server start
+
+DHCP Client List, Way 1.
+lu@raspberrypi:~$ dhcp-lease-list
+To get manufacturer names please download http://standards.ieee.org/regauth/oui/oui.txt to /usr/local/etc/oui.txt
+Reading leases from /var/lib/dhcp/dhcpd.leases
+MAC                IP              hostname       valid until         manufacturer        
+===============================================================================================
+72:88:6b:ae:32:d8  192.168.2.11    KB-AE-32-D8    2023-05-09 15:28:35 -NA-                
+lu@raspberrypi:~$ 
 
 
-Detail Info
+DHCP Client List, Way 2 (Detail Info).
 lu@raspberrypi:~$ cat /var/lib/dhcp/dhcpd.leases
 # The format of this file is documented in the dhcpd.leases(5) manual page.
 # This lease file was written by isc-dhcp-4.4.1
