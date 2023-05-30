@@ -1,0 +1,52 @@
+我是參考這個網頁安裝tftp
+
+https://yulun.me/2016/setup-tftp-server-on-ubuntu/
+基本上你就是修改
+
+server_args     = /tftpboot
+然後reestart即可
+
+sudo service xinetd restart
+
+
+
+ubuntu@ubuntu:~$ cd /tftpboot/
+ubuntu@ubuntu:/tftpboot$ ls -l
+total 4
+-rwxrwxrwx 1 ubuntu ubuntu 2 May 30 07:51 test_lu
+ubuntu@ubuntu:/tftpboot$ cat /etc/xinetd.d/tftp 
+service tftp
+{
+protocol        = udp
+port            = 69
+socket_type     = dgram
+wait            = yes
+user            = nobody
+server          = /usr/sbin/in.tftpd
+server_args     = /tftpboot
+disable         = no
+} 
+ubuntu@ubuntu:/tftpboot$ cd /tmp
+ubuntu@ubuntu:/tmp$ ls
+snap-private-tmp
+systemd-private-8ccddfaef24043a6bc39067196a13b79-systemd-resolved.service-RGe6Jj
+systemd-private-8ccddfaef24043a6bc39067196a13b79-systemd-timesyncd.service-zJP527
+ubuntu@ubuntu:/tmp$ tftp localhost
+tftp> get test_lu
+Received 3 bytes in 0.0 seconds
+tftp> quit
+ubuntu@ubuntu:/tmp$ ls -l
+total 16
+drwx------ 2 root   root   4096 Mar  2 13:15 snap-private-tmp
+drwx------ 3 root   root   4096 May 15 03:45 systemd-private-8ccddfaef24043a6bc39067196a13b79-systemd-resolved.service-RGe6Jj
+drwx------ 3 root   root   4096 Mar  2 13:15 systemd-private-8ccddfaef24043a6bc39067196a13b79-systemd-timesyncd.service-zJP527
+-rw-r--r-- 1 ubuntu ubuntu    2 May 30 07:55 test_lu
+ubuntu@ubuntu:/tmp$ 
+
+ubuntu@ubuntu:/tmp$ exit
+logout
+root@OpenWrt:/# cd /tmp
+root@OpenWrt:/tmp# tftp -g -r test_lu 192.168.2.123
+root@OpenWrt:/tmp# ls -l test_lu 
+-rw-r--r--    1 root     root             2 Apr 28 10:25 test_lu
+root@OpenWrt:/tmp# 
