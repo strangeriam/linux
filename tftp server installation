@@ -9,7 +9,39 @@ server_args     = /tftpboot
 sudo service xinetd restart
 
 
+檢查 tftp server 是否啟用
+lu-230531: TFTP Port 69 是由 xinetd 啟用.
+ubuntu@ubuntu:~$ sudo netstat -tulnp | grep xinetd
+udp6       0      0 :::69                   :::*                                1167/xinetd         
+ubuntu@ubuntu:~$ 
 
+
+## tftp 狀態查看
+## ======================================================================
+ubuntu@ubuntu:~$ service xinetd status
+[0m xinetd.service - LSB: Starts or stops the xinetd daemon.
+   Loaded: loaded (/etc/init.d/xinetd; generated)
+   Active: active (running) since Tue 2023-05-30 08:43:48 UTC; 3min 59s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 1679 ExecStop=/etc/init.d/xinetd stop (code=exited, status=0/SUCCESS)
+  Process: 1685 ExecStart=/etc/init.d/xinetd start (code=exited, status=0/SUCCESS)
+    Tasks: 1 (limit: 4915)
+   CGroup: /system.slice/xinetd.service
+           1695 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd_compat -inetd_ipv6
+
+May 30 08:46:59 ubuntu tftpd[1780]: tftpd: trying to get file: 222
+May 30 08:46:59 ubuntu tftpd[1780]: tftpd: serving file from /tftpboot
+May 30 08:47:01 ubuntu tftpd[1786]: tftpd: trying to get file: 222
+May 30 08:47:01 ubuntu tftpd[1786]: tftpd: serving file from /tftpboot
+May 30 08:47:03 ubuntu tftpd[1791]: tftpd: trying to get file: 222
+May 30 08:47:03 ubuntu tftpd[1791]: tftpd: serving file from /tftpboot
+May 30 08:47:05 ubuntu tftpd[1794]: tftpd: trying to get file: 222
+May 30 08:47:05 ubuntu tftpd[1794]: tftpd: serving file from /tftpboot
+May 30 08:47:07 ubuntu tftpd[1797]: tftpd: trying to get file: 222
+May 30 08:47:07 ubuntu tftpd[1797]: tftpd: serving file from /tftpboot
+ubuntu@ubuntu:~$ 
+
+## ======================================================================
 ubuntu@ubuntu:~$ cd /tftpboot/
 ubuntu@ubuntu:/tftpboot$ ls -l
 total 4
