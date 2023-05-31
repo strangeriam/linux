@@ -41,6 +41,19 @@ May 30 08:47:07 ubuntu tftpd[1797]: tftpd: trying to get file: 222
 May 30 08:47:07 ubuntu tftpd[1797]: tftpd: serving file from /tftpboot
 ubuntu@ubuntu:~$ 
 
+## Lu-230531
+## 奇怪的情形
+## 如要從 TFTP Client 上傳到 TFTP Server, Client 會出現訊息 tftp: timeout
+## 要解決此問題, 就必須在 TFTP server 先產生 Client 要上傳同檔名的檔案.
+## ======================================================================
+TFTP Server:
+# touch /tftpboot/test_me
+# chmod 777 /tftpboot/test_me
+
+TFTP Client:
+root@OpenWrt:/tmp# tftp -p -l /tmp/TZ -r test_me 192.168.2.123
+
+
 ## ======================================================================
 ubuntu@ubuntu:~$ cd /tftpboot/
 ubuntu@ubuntu:/tftpboot$ ls -l
