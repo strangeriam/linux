@@ -1,0 +1,4 @@
+# sudo ufw status
+
+Status: inactive  // 防火牆 已關閉
+Status: active // 防火牆 已開啟
