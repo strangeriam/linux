@@ -2,3 +2,6 @@
 
 Status: inactive  // 防火牆 已關閉
 Status: active // 防火牆 已開啟
+
+關閉 防火搶
+# sudo ufw disable
