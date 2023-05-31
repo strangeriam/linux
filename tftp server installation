@@ -23,9 +23,10 @@ socket_type     = dgram
 wait            = yes
 user            = nobody
 server          = /usr/sbin/in.tftpd
-server_args     = /tftpboot
-disable         = no
-} 
+server_args     = /tftpboot -c       // 指定 TFTP 儲存路徑(-c 允許上傳)
+disable         = no                // tftp server 預設是啟動
+}
+
 ubuntu@ubuntu:/tftpboot$ cd /tmp
 ubuntu@ubuntu:/tmp$ ls
 snap-private-tmp
