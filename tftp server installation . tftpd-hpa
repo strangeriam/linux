@@ -1,0 +1,22 @@
+ubuntu@ubuntu:~$ cat /etc/default/tftpd-hpa                                     
+# /etc/default/tftpd-hpa                                                        
+TFTP_USERNAME="tftp"                                                            
+TFTP_DIRECTORY="/home/ubuntu/tftpboot"                                          
+TFTP_ADDRESS=":69"                                                              
+TFTP_OPTIONS="--secure -l -c -s"                                                
+ubuntu@ubuntu:~$ 
+
+
+root@OpenWrt:/tmp# tftp -p -l virtual_art.bin 192.168.2.123                     
+[ 3214.326318] nf_conntrack: default automatic helper assignment has been turne.
+
+
+ 
+
+ubuntu@ubuntu:~$ ls -l ~/tftpboot/                                              
+total 1036                                                                      
+-rwxrwxrwx 1 nobody ubuntu       4 May 30 10:17 test_file                       
+-rwxrwxrwx 1 nobody ubuntu      11 May 30 09:58 test_papa                       
+-rw-rw-rw- 1 tftp   tftp         4 May 31 05:43 test_sig                        
+-rw-rw-rw- 1 tftp   tftp   1048576 May 31 05:44 virtual_art.bin                 
+ubuntu@ubuntu:~$ 
