@@ -3,3 +3,11 @@
 sudo dhcp_release eth0 192.168.2.51 72:88:6b:58:7e:7c
 
 /var/lib/dhcp/dhcpd.leases
+
+sudo su -l
+systemctl stop isc-dhcp-server.service
+rm /config/dhcpd.leases~
+echo "" > /config/dhcpd.leases 
+systemctl start isc-dhcp-server.service
+exit
+Or just edit /config/dhcpd.leases file manually if you want to delete some leases.
