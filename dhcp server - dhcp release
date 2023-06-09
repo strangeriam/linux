@@ -1,0 +1,5 @@
+
+## Not Work
+sudo dhcp_release eth0 192.168.2.51 72:88:6b:58:7e:7c
+
+/var/lib/dhcp/dhcpd.leases
