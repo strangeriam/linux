@@ -1,4 +1,4 @@
-# vi /etc/netplan/00-installer-config.yaml
+# sudo vim /etc/netplan/50-cloud-init.yaml
 network:
   ethernets:
     enp2s0:
