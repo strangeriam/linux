@@ -1,8 +1,11 @@
 
-Active DHCP Server.
-# sudo service isc-dhcp-server start
+## Active DHCP Server.
+## ===================
+lu@raspberrypi:~$ sudo service isc-dhcp-server start
 
-DHCP Client List, Way 1.
+
+## DHCP Client List, Way 1.
+## ========================
 lu@raspberrypi:~$ dhcp-lease-list
 To get manufacturer names please download http://standards.ieee.org/regauth/oui/oui.txt to /usr/local/etc/oui.txt
 Reading leases from /var/lib/dhcp/dhcpd.leases
@@ -13,6 +16,7 @@ lu@raspberrypi:~$
 
 
 DHCP Client List, Way 2 (Detail Info).
+## ====================================
 lu@raspberrypi:~$ cat /var/lib/dhcp/dhcpd.leases
 # The format of this file is documented in the dhcpd.leases(5) manual page.
 # This lease file was written by isc-dhcp-4.4.1
