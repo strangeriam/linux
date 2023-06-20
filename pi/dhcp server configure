@@ -1,0 +1,22 @@
+## sudo vi /etc/dhcp/dhcpd.conf
+
+## Lease time
+## IP租約時間以 max-lease-time 10; 為主. 此設定是 10 秒.
+default-lease-time 5;
+max-lease-time 10;
+
+## IP Pool
+subnet 192.168.2.0 netmask 255.255.255.0 {
+  range 192.168.2.10 192.168.2.50;
+  option routers 192.168.2.254;
+  default-lease-time 60;
+  max-lease-time 120;
+}
+
+## 查看 DHCP Server Status.
+sudo systemctl status isc-dhcp-server.service
+
+vi /var/log/syslog
+
+## DHCP Client List
+dhcp-lease-list 
