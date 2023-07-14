@@ -1,7 +1,10 @@
-Nice值的範圍是-20~+19，擁有Nice值越大的行程的實際優先級越小（即Nice值為+19的行程優先級最小，為-20的行程優先級最大），預設的Nice值是0
-只有 root 可使用小於 0 的 nice 值.
+## Nice 值的範圍是 -20 ~ +19.
+## 擁有 Nice 值越大的行程的實際優先級越小.
+## 即 Nice 值為 +19 的行程優先級最小, 為 -20 的行程優先級最大.
+## 預設的 Nice 值是 0
 
-nice -n NUM COMMAND
+## 只有 root 可使用小於 0 的 nice 值.
+## Syntax: nice -n NUM COMMAND
 
 ## nice 值為 3
-nice -n 3 command-name
+nice -n 3 iperf3 -c 192.168.6.1 -t 10 -i 3 -bidir
