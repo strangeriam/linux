@@ -1,0 +1,29 @@
+# top
+
+Mem: 114412K used, 795048K free, 180K shrd, 6744K buff, 22416K cached
+CPU:   0% usr   0% sys   0% nic  99% idle   0% io   0% irq   0% sirq
+Load average: 0.00 0.00 0.00 1/166 1603
+  PID  PPID USER     STAT   VSZ %VSZ %CPU COMMAND
+ 1595   211 root     R     1352   0%   0% top
+ 1593  1587 root     S     3648   0%   0% hostapd -dd /etc/hostapd.conf
+ 1363     1 network  S     1876   0%   0% /usr/sbin/zebra -d -f /var/etc/quagga/
+  944     1 root     S     1480   0%   0% /sbin/netifd
+    1     0 root     S     1372   0%   0% /sbin/procd
+ 1054     1 root     S     1352   0%   0% /usr/sbin/uhttpd -f -h /www -r OpenWrt
+ 1587   211 root     S     1344   0%   0% /bin/sh ./etc/Accton/wds ap
+  211     1 root     S     1340   0%   0% /bin/ash --login
+ 1332     1 root     S<    1332   0%   0% /usr/sbin/ntpd -n -N -S /usr/sbin/ntpd
+ 1030     1 root     S     1332   0%   0% /usr/sbin/telnetd -F -l /bin/login.sh
+  893     1 root     S     1288   0%   0% /sbin/rpcd
+ 1368     1 root     S     1144   0%   0% /usr/sbin/watchquagga -d -z -T 60 -r /
+  884     1 root     S     1056   0%   0% /sbin/logd -S 64
+ 1234     1 dnsmasq  S      984   0%   0% /usr/sbin/dnsmasq -C /var/etc/dnsmasq.
+ 1339     1 root     S<     948   0%   0% /usr/sbin/thermald
+  994     1 root     S      876   0%   0% /usr/sbin/dropbear -F -P /var/run/drop
+  210     1 root     S      840   0%   0% /sbin/ubusd
+ 1132     1 root     S      828   0%   0% xl2tpd -D -l -p /var/run/xl2tpd.pid
+ 1594  1587 root     S      808   0%   0% iperf3 -s
+ 1523     1 root     S      752   0%   0% /sbin/rngd -r /dev/hwrng -W 2048 -s 25
+
+
+mpstat -P ALL
