@@ -1,0 +1,5 @@
+查看 DHCP Server Status.
+
+ubuntu@ubuntu:~$ sudo systemctl status isc-dhcp-server.service
+
+ubuntu@ubuntu:~$ vi /var/log/syslog
