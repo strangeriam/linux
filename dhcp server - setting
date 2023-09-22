@@ -1,0 +1,7 @@
+
+ubuntu@ubuntu:~$ sudo vi /etc/dhcp/dhcpd.conf
+
+## Lease time
+## IP租約時間以 max-lease-time 10; 為主. 此設定是 10 秒.
+default-lease-time 5;
+max-lease-time 10;
