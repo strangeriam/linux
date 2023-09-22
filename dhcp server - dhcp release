@@ -1,4 +1,10 @@
 
+## Update: Lu-230922
+# Clear all DHCP cient list.
+sudo rm -rf /vat/lib/dhcp/dhcpd.lease
+sudo service isc-dhcp-server restart
+
+
 ## Not Work
 sudo dhcp_release eth0 192.168.2.51 72:88:6b:58:7e:7c
 
