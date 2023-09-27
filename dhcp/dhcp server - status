@@ -5,9 +5,6 @@ ubuntu@ubuntu:~$ sudo systemctl status isc-dhcp-server.service
 ubuntu@ubuntu:~$ vi /var/log/syslog
 
 
-## Config file
-ubuntu@ubuntu:~$ cat /etc/dhcp/dhcpd.conf
-
 
 ## DHCP Client List
 ubuntu@ubuntu:~$ dhcp-lease-list
