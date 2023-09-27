@@ -1,6 +1,4 @@
 
-
-
 ## No USB dongle
 root@igw5000:~# fdisk -l
 Disk /dev/sda: 238.5 GiB, 256060514304 bytes, 500118192 sectors
