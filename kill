@@ -1,12 +1,14 @@
-# 強制刪除
+## 強制刪除
 kill -9 "pid"
 
-# 刪除跟 iperf 有關的 process.
+## 刪除跟 iperf 有關的 process.
 killall iperf
 
+## 如需要刪除有帶 sh 執行的程式.
+## 例如: sh /etc/Accton/iperf3-test.sh
+killall sh
 
-killall 指令常用的參數有：
-
+## killall 指令常用的參數有：
 -e, --exact：
 在程式名稱完全比對成功時，才中止程式。
 如果程式的名稱超過 15 個字元，其餘的字元在系統中會被捨去，這時候在預設的狀況下，killall 會把所有符合前 15 個字元的程式都中止掉，如果加上 -e 參數的話，killall 指令就會跳過這種名稱過長的程式。
