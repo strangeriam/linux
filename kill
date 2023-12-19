@@ -1,0 +1,5 @@
+# 強制刪除
+kill -9 "pid"
+
+# 刪除跟 iperf 有關的 process.
+killall iperf
