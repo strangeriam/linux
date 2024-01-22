@@ -1,0 +1,23 @@
+
+## Stage A
+## List current status, there is only one of eth1 shows on brctl.
+root@OpenWrt:/# brctl show
+bridge name     bridge id               STP enabled     interfaces
+br-lan          7fff.98192cae32db       no              eth1
+root@OpenWrt:/# 
+
+## Stage B
+## Add one more eth0 to bridge of br-lan.
+root@OpenWrt:/# brctl addif br-lan eth0
+[ 5583.213593] device eth0 entered promiscuous mode
+[ 5583.213885] br-lan: port 2(eth0) entered forwarding state
+[ 5583.217308] br-lan: port 2(eth0) entered forwarding state
+root@OpenWrt:/# 
+
+## Stage C
+## Check brctl, got one more eth0 shows on brctl.
+root@OpenWrt:/# brctl show
+bridge name     bridge id               STP enabled     interfaces
+br-lan          7fff.98192cae32db       no              eth0
+                                                        eth1
+root@OpenWrt:/# 
