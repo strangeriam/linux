@@ -1,0 +1,10 @@
+Tune on [NumLock] by default.
+Add following on bottom on file rc.sysinit, and reboot the Linux.
+
+Step-1:
+ # vi /etc/rc.d/rc.sysinit
+Step-2:
+for tty in /dev/tty[1-9]*; do setleds -D +num < $tty
+done
+Step-3:
+# reboot
